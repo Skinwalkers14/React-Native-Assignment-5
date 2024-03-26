@@ -6,11 +6,14 @@ import React, { useState } from 'react';
 import { SafeAreaView, StyleSheet, Button } from 'react-native';
 import ToDoList from '../Components/ToDoList';
 import ToDoForm from '../Components/ToDoForm';
+
 export default function HomeScreen({ navigation }) {
   const [tasks, setTasks] = useState([]);
+
   const addTask = (taskText) => {
-     setTasks([...tasks, taskText]);
-    };
+    setTasks(prevTasks => [...prevTasks, taskText]);
+  };
+
   return (
     <SafeAreaView style={styles.container}> 
       <ToDoList tasks={tasks} />

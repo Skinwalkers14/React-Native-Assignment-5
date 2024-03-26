@@ -7,23 +7,23 @@ function ToDoForm({ addTask }) {
 
   return (
     <MainLayout>
-    <View style={formStyles.form}>
-      <TextInput
-        style={formStyles.input}
-        placeholder="Add a new task..."
-        onChangeText={(text) => setTaskText(text)}
-        value={taskText}
-      />
-      <Button
-        title="Add Task"
-        onPress={() => {
-          if (typeof taskText === 'string' && taskText.trim() !== '') {
-            addTask(taskText);
-            setTaskText('');
-          }
-        }}
-      />
-    </View>
+      <View style={formStyles.form}>
+        <TextInput
+          style={formStyles.input}
+          placeholder="Add a new task..."
+          onChangeText={(text) => setTaskText(text)}
+          value={taskText}
+        />
+        <Button
+          title="Add Task"
+          onPress={() => {
+            if (typeof taskText === 'string' && taskText.trim() !== '') {
+              addTask(taskText);
+              setTaskText('');
+            }
+          }}
+        />
+      </View>
     </MainLayout>
   );
 }

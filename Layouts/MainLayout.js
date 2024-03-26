@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import Footer from '../components/Footer';
+import Footer from '../Components/Footer';
 
 const MainLayout = ({ children }) => {
   return (
@@ -13,7 +13,6 @@ const MainLayout = ({ children }) => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     padding: 20,
   },
 });
